@@ -7,12 +7,17 @@ const fs = require('fs');
 
 app.set('view engine' , 'ejs');
 
-app.get('./' , (req , res) => {
+// Pages
+app.set('./pages')
+app.set('login' , './pages/login.ejs');
+
+app.get('/' , (req , res) => {
     res.send("This is the home page // Under Construction");
 })
 
 app.get('/login' , (req , res) => {
-    fs.readFile('pages/index.html' , function(err , data){
+    console.log("Someone has come to the home page.");
+    fs.readFile('./pages/home-page/index.ejs' , function(err , data){
         res.writeHead(200 , {'Content-Type' : 'text/html'});
         res.write(data);
         return res.end();

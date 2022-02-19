@@ -1,0 +1,22 @@
+{
+  "name": "artg-official-web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OfficialAaRat-RRI/ARTG-Official-Web.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OfficialAaRat-RRI/ARTG-Official-Web/issues"
+  },
+  "homepage": "https://github.com/OfficialAaRat-RRI/ARTG-Official-Web#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}

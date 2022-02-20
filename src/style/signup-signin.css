@@ -48,3 +48,111 @@ form.signup-form{
     color: #fff;
     margin-bottom: 10px;
 }
+
+.input-field {
+    max-width: 380px;
+    width: 100%;
+    background: rgba( 89, 149, 253, 0.95 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 18.5px );
+    -webkit-backdrop-filter: blur( 18.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    margin: 10px 0;
+    height: 55px;
+    border-radius: 55px;
+    display: grid;
+    grid-template-columns: 15% 85%;
+    padding: 0 0.4rem;
+    position: relative;
+}
+
+.input-field input{
+    background: none;
+    outline: none;
+    border: none;
+    line-height: 1;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #333
+}
+
+.input-field input::placeholder{
+    color: #555;
+    font-weight: 500;
+}
+
+.btn {
+    width: 150px;
+    background: rgba( 89, 149, 253, 0.95 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 18.5px );
+    -webkit-backdrop-filter: blur( 18.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    outline: none;
+    height: 49px;
+    border-radius: 49px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: 0.5s;
+ }
+  
+.btn:hover {
+    background-color: #4d84e2;
+}
+
+.container:before {
+    content: "";
+    position: absolute;
+    height: 2000px;
+    width: 2000px;
+    top: -10%;
+    right: 48%;
+    transform: translateY(-50%);
+    transition: 1.8s ease-in-out;
+    border-radius: 50%;
+    z-index: 6;
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+}
+
+.container.sign-up-mode:before {
+    transform: translate(100%, -50%);
+    right: 52%;
+  }
+  
+.container.sign-up-mode .left-panel .image , .container.sign-up-mode .left-panel .content {
+    transform: translateX(-800px);
+}
+  
+.container.sign-up-mode .signin-signup {
+    left: 25%;
+}
+  
+.container.sign-up-mode form.sign-up-form {
+    opacity: 1;
+    z-index: 2;
+}
+  
+.container.sign-up-mode form.sign-in-form {
+    opacity: 0;
+    z-index: 1;
+}
+  
+.container.sign-up-mode .right-panel .image , .container.sign-up-mode .right-panel .content {
+    transform: translateX(0%);
+}
+  
+.container.sign-up-mode .left-panel {
+    pointer-events: none;
+}
+  
+.container.sign-up-mode .right-panel {
+    pointer-events: all;
+}

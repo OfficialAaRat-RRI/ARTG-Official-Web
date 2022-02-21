@@ -25,10 +25,9 @@ body , input{
 .forms-container{
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 55%;
     transform: translate(-50% , -50%);
     width: 100%;
-    transition: 1s 0.7s ease-in-out;
     display: grid;
 }
 

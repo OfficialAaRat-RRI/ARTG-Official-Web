@@ -46,12 +46,12 @@ app.set('view engine' , 'ejs')
 // Static Files
 
 app.use(express.static('public'));
-app.use('/css', express.static(__dirname + '/public/css'));
+app.use('/css', express.static(__dirname + 'src/public/css'));
 
 // Pages Files
 
 app.set('pages', path.join(__dirname, './pages'));
-app.set('login' , './pages/login/signin-signup.ejs');
+app.set('login' , 'src/pages/login/signin-signup.ejs');
 app.set('view engine' , 'ejs');
 
 // Routes
@@ -59,7 +59,7 @@ app.set('view engine' , 'ejs');
 app.get('/' , (req , res) => {
     // res.send("This is the home page // Under Construction");
     console.log("Someone has visited the home page");
-    fs.readFile('./pages/home-page/index.ejs' , function(err , data){
+    fs.readFile('src/pages/home-page/index.ejs' , function(err , data){
         res.writeHead(200 , {'Content-Type' : 'text/html'});
         res.write(data || 'no data');
         return res.end();
@@ -67,7 +67,8 @@ app.get('/' , (req , res) => {
 })
 
 app.get('/login' , (req , res) => {
-    fs.readFile('./pages/login/signin-signup.ejs' , function(err , data){
+    fs.readFile('src/pages/login/signin-signup.ejs' , function(err , data){
+        if(err) console.log(err)
         res.writeHead(200 , {'Content-Type' : 'text/html'});
         res.write(data);
         return res.end();
@@ -75,7 +76,7 @@ app.get('/login' , (req , res) => {
 })
 
 app.get('/protected' , isloggedIn , (req , res) => {
-    fs.readFile('./pages/user-profile/user.ejs' , function(err , data){
+    fs.readFile('src/pages/user-profile/user.ejs' , function(err , data){
         res.writeHead(200 , {'Content-Type' : 'text/html'});
         res.write(data);
         return res.end();
@@ -88,6 +89,7 @@ app.get('/user/logout' , (req , res) => {
     req.logout();
     req.session.destroy();
     res.send("User has been logged out");
+    console.log("User has been logged out");
 })
 
 // Scope

@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/OfficialAaRat-RRI/ARTG-Official-Web#readme",
   "dependencies": {
+    "bootstrap-icons": "^1.8.1",
     "cookie-session": "^2.0.0",
     "ejs": "^3.1.6",
     "express": "^4.17.3",

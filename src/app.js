@@ -75,7 +75,7 @@ app.get('/login' , (req , res) => {
     })
 })
 
-app.get('/protected' , isloggedIn , (req , res) => {
+app.get('/user' , isloggedIn , (req , res) => {
     fs.readFile('src/pages/user-profile/user.ejs' , function(err , data){
         res.writeHead(200 , {'Content-Type' : 'text/html'});
         res.write(data);
@@ -97,7 +97,7 @@ app.get('/user/logout' , (req , res) => {
 app.get('/auth/google' , passport.authenticate('google' , { scope : ['profile' , 'email'] }));
 
 app.get('/google/callback' , passport.authenticate('google' , {
-    successRedirect: '/protected' ,
+    successRedirect: '/user' ,
     failureRedirect: '/auth/faliure'
 }))
 

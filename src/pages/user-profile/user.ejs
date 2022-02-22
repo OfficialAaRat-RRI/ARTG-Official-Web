@@ -5,11 +5,32 @@
         <meta charset="X-UA-Compatiable" content="IE=edge">
         <meta name="viewport" content="width=device-width , initial-scale=1.0">
         <link rel="stylesheet" href="../../public/style/styles.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
         <title>Profile</title>
     </head>
     <body>
-        <strong>You have logged in</strong>
+        <!-- <strong>You have logged in</strong>
         <h1>You are at AaRat Games Profile</h1>   
-        <a href="./logout.ejs">Logout</a>     
+        <a href="./logout.ejs">Logout</a>      -->
+
+        <nav class="navbar navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./user.ejs">
+                    AaRat Games Official
+                </a>
+
+                <a class="navbar-item" href="./logout.ejs">
+                    Logout
+                </a>
+            </div>
+        </nav>
+        <div class="bg-dark text-center border-bottom mx-auto">
+            <h1 class="text-white">Welcome to AaRat Games Official!</h1>
+            <a>
+                <button type="button" class="btn btn-outline-info our-games">Our Games</button>
+            </a>
+        </div>
     </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 </html>

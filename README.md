@@ -4,7 +4,7 @@
 
 # Start Development!
 
-Before Running we kindly request you to read [Contributing/md]
+Before Running we kindly request you to read [Contributing.md](https://github.com/OfficialAaRat-RRI/ARTG-Official-Web/blob/main/CONTRIBUTING.md)
 
 1. Make sure you have Node.JS installed to the latest version.
 2. Fork / Clone the repo in your local device and install all the node modules from `package-json` via `npm install`.

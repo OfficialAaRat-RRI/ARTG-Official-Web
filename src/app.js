@@ -12,6 +12,7 @@ var userProfile;
 
 require('./auth');
 const session = require('express-session');
+const { response } = require('express');
 console.log(config);
 
 // Google Log in Procress
@@ -90,6 +91,22 @@ app.get('/user/logout' , (req , res) => {
     req.session.destroy();
     res.send("User has been logged out");
     console.log("User has been logged out");
+})
+
+app.get('/search' , (req , res) => {
+    const search = req.query.search;
+
+    if(!search) return res.send('Enter a search query');
+
+    if(search != null){
+        searchGoogle(search)
+            .then(results => {
+                response.status(200);
+                response.json(results);
+            })
+    } else {
+        response.end();
+    }
 })
 
 // Scope

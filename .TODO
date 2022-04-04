@@ -8,7 +8,6 @@
 In the home page , `/login` doesn't work. It redirects to `Cannot GET /login/signin-signup.ejs`.
 When `/login` is accessed from the home page button , CSS doesn't appear. **FIX**
 In `/login` ( signin-signup.ejs ) , Google and other types of login doesn't shows up.
-Try update and add _own_ css for `/user` ( user-profil/user.ejs )
 
 **TODO**
 - Add google callback link.

@@ -13,7 +13,7 @@ We would love to see you add some new features! Here are different ways you can 
 You need to have these things before asking to Maintain / Actively work on this project:
 
 1) Github Account
-2) Discord Account: Send a friend request to `probably araaa#5812`. I'll be adding you to a group.
+2) Discord Account: Send a friend request to `AaTherf#5812`. I'll be adding you to a group.
 3) We will be asking you some questions.
 4) If you pass all of it you have a chance of joining.
 
